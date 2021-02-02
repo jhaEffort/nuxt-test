@@ -1,14 +1,35 @@
 export default {
+  mode: 'universal',
+  /*
+  ** Server configuration
+  */
   server: {
-    port: 8000, // default: 3000
-    host: 'localhost' // default: localhost,
+    port: 8000,
+    host: 'localhost'
+  },
+  /*
+  ** Environment variable configuration
+  */
+  env: {
+    baseUrl: 'http://localhost:8000'
+  },
+  /*
+ ** Router configuration
+ */
+  router: {
+    extendRoutes(routes, resolve) {
+      console.log('输出的路由', routes)
+      routes.push({
+        path: '/',
+        redirect: {
+          name: 'timeline-title'
+        }
+      })
+    }
   },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'my-nuxt',
-    htmlAttrs: {
-      lang: 'en'
-    },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },

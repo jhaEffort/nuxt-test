@@ -3,14 +3,21 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
+    "dev": "cross-env NODE_ENV=development nodemon --inspect server/index.js --watch server",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "consola": "^2.15.0",
     "core-js": "^3.8.3",
+    "cross-env": "^7.0.3",
     "element-ui": "^2.15.0",
+    "koa": "^2.13.1",
+    "koa-bodyparser": "^4.3.0",
+    "koa-helmet": "^6.0.0",
+    "koa-router": "^10.0.0",
+    "koa2-cors": "^2.0.6",
     "nuxt": "^2.14.12"
   },
   "devDependencies": {
