@@ -9,19 +9,16 @@ const { Nuxt, Builder } = require('nuxt')
 const app = new Koa()
 const router = new Router()
 
-
 // Import and Set Nuxt.js options
 const config = require('../nuxt.config.js')
-console.log('输出的config', config)
 config.dev = app.env !== 'production'
 
-function useMiddleware() {
+function useMiddleware(){
   app.use(helmet())
   app.use(bodyParser())
   //设置全局返回头
   app.use(cors({
-    origin: function (ctx) {
-      console.log('输出的ctx', ctx)
+    origin: function(ctx) {
       return 'http://localhost:8000'; //cors
     },
     exposeHeaders: ['WWW-Authenticate', 'Server-Authorization'],

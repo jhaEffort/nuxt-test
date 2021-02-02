@@ -9,6 +9,7 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "async-validator": "^3.5.1",
     "consola": "^2.15.0",
     "core-js": "^3.8.3",
     "cross-env": "^7.0.3",
