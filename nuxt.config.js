@@ -5,13 +5,13 @@ module.exports = {
   */
   server: {
     port: 8000,
-    host: '127.0.0.1'
+    host: '192.168.0.125'
   },
   /*
   ** Environment variable configuration
   */
   env: {
-    baseUrl: 'http://127.0.0.1:8000'
+    baseUrl: 'http://192.168.0.125:8000'
   },
   /*
  ** Router configuration

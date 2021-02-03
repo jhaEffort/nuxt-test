@@ -3,11 +3,7 @@
     <div class="topbar">
       <div class="topbar__main">
         <nuxt-link to="/timeline" class="logo">
-        <!--//sf6-scmcdn2-tos.pstatp.com/xitu_juejin_web/img/logo.a7995ad.svg-->
-          <img
-            src="https://b-gold-cdn.xitu.io/v3/static/img/logo.a7995ad.svg"
-            alt="掘金"
-          />
+          <img src="https://b-gold-cdn.xitu.io/v3/static/img/logo.a7995ad.svg" alt="掘金">
         </nuxt-link>
       </div>
     </div>

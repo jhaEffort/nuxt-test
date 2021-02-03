@@ -12,13 +12,12 @@ const router = new Router()
 // Import and Set Nuxt.js options
 const config = require('../nuxt.config.js')
 config.dev = app.env !== 'production'
-
-function useMiddleware(){
+function useMiddleware() {
   app.use(helmet())
   app.use(bodyParser())
   //设置全局返回头
   app.use(cors({
-    origin: function(ctx) {
+    origin: function (ctx) {
       return 'http://localhost:8000'; //cors
     },
     exposeHeaders: ['WWW-Authenticate', 'Server-Authorization'],
@@ -29,8 +28,9 @@ function useMiddleware(){
   }))
 }
 
-function useRouter(path){
+function useRouter(path) {
   path = path || __dirname + '/routes'
+  console.log('输出的path', path)
   //注册路由
   let urls = fs.readdirSync(path)
   urls.forEach((element) => {
@@ -50,12 +50,12 @@ function useRouter(path){
   app.use(router.routes()).use(router.allowedMethods())
 }
 
-async function start () {
+async function start() {
   // Instantiate nuxt.js
   const nuxt = new Nuxt(config)
 
   const {
-    host = process.env.HOST || '127.0.0.1',
+    host = process.env.HOST || '192.168.0.125',
     port = process.env.PORT || 3000
   } = nuxt.options.server
 

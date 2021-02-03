@@ -1,29 +1,47 @@
 {
-  "name": "my-nuxt",
+  "name": "nuxt-project",
   "version": "1.0.0",
+  "description": "Nuxt.js Juejin",
+  "author": "ChanWahFung",
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon --inspect server/index.js --watch server",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
   },
   "dependencies": {
-    "async-validator": "^3.5.1",
-    "consola": "^2.15.0",
-    "core-js": "^3.8.3",
-    "cross-env": "^7.0.3",
-    "element-ui": "^2.15.0",
-    "koa": "^2.13.1",
-    "koa-bodyparser": "^4.3.0",
-    "koa-helmet": "^6.0.0",
-    "koa-router": "^10.0.0",
+    "@nuxtjs/axios": "^5.3.6",
+    "async-validator": "^3.3.0",
+    "cookie-universal-nuxt": "^2.1.3",
+    "cross-env": "^5.2.0",
+    "element-ui": "^2.13.0",
+    "highlight.js": "^10.4.0",
+    "koa": "^2.6.2",
+    "koa-bodyparser": "^4.2.1",
+    "koa-helmet": "^5.2.0",
+    "koa-router": "^8.0.8",
     "koa2-cors": "^2.0.6",
-    "nuxt": "^2.14.12"
+    "lru-cache": "^5.1.1",
+    "markdown-it": "^11.0.0",
+    "moment": "^2.24.0",
+    "nuxt": "^2.0.0",
+    "request": "^2.88.2",
+    "vue-i18n": "^8.17.6",
+    "vuex": "^3.1.3"
   },
   "devDependencies": {
-    "node-sass": "^5.0.0",
-    "sass-loader": "^10.1.1",
-    "style-loader": "^2.0.0"
+    "@nuxtjs/eslint-config": "^2.0.0",
+    "@nuxtjs/eslint-module": "^1.0.0",
+    "@nuxtjs/style-resources": "^1.0.0",
+    "babel-eslint": "^10.0.1",
+    "babel-plugin-component": "^1.1.1",
+    "eslint": "^6.1.0",
+    "eslint-plugin-nuxt": ">=0.4.2",
+    "node-sass": "^4.14.1",
+    "nodemon": "^1.18.9",
+    "sass-loader": "^8.0.2",
+    "scss-loader": "0.0.1"
   }
 }
