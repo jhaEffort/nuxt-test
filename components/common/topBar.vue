@@ -1,13 +1,26 @@
 <template>
-  <div class="topbar__wrapper">
+  <header class="topbar__wrapper">
     <div class="topbar">
       <div class="topbar__main">
         <nuxt-link to="/timeline" class="logo">
-          <img src="https://b-gold-cdn.xitu.io/v3/static/img/logo.a7995ad.svg" alt="掘金">
+          <img
+            src="https://b-gold-cdn.xitu.io/v3/static/img/logo.a7995ad.svg"
+            alt="掘金"
+          />
         </nuxt-link>
+        <ul>
+          <nuxt-link
+            v-for="item in navs"
+            :key="item.id"
+            :to="item.link"
+            tag="li"
+            class="nav-item"
+            >{{ $t("topbar." + item.name) }}</nuxt-link
+          >
+        </ul>
       </div>
     </div>
-  </div>
+  </header>
 </template>
 <script>
 export default {
@@ -40,7 +53,6 @@ export default {
   z-index: 1000;
   position: relative;
   height: 60px;
-  display: block;
   .topbar {
     position: fixed;
     top: 0;

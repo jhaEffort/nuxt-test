@@ -4,14 +4,14 @@ module.exports = {
   ** Server configuration
   */
   server: {
-    port: 8000,
+    port: 8001,
     host: '192.168.0.125'
   },
   /*
   ** Environment variable configuration
   */
   env: {
-    baseUrl: 'http://192.168.0.125:8000'
+    baseUrl: 'http://192.168.0.125:8001'
   },
   /*
  ** Router configuration
@@ -46,6 +46,7 @@ module.exports = {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    '~/assets/css/reset.css',
     'element-ui/lib/theme-chalk/index.css'
   ],
 

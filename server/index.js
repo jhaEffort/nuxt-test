@@ -18,7 +18,7 @@ function useMiddleware() {
   //设置全局返回头
   app.use(cors({
     origin: function (ctx) {
-      return 'http://localhost:8000'; //cors
+      return 'http://localhost:8001'; //cors
     },
     exposeHeaders: ['WWW-Authenticate', 'Server-Authorization'],
     maxAge: 86400,
