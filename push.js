@@ -1,6 +1,7 @@
 
 /*
 *argv: ['node地址', '执行文件', '命令行参数']
+*测试数据
 */
 // console.log(process.argv.splice(2))
 
