@@ -5,4 +5,4 @@
    git pull origin master
    git push origin master
    npm run dev
-   echo "完成add、commit、pull，别忘了push"
+   echo "项目已启动"
