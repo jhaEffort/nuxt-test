@@ -9,7 +9,7 @@ if [ -n "$msg" ]; then
     if [ $? == 0 ]; then
       git push origin "${branch}"
       npm run dev
-      echo $?
+      echo "------------------------${$?}"
       echo "项目已启动"
     else
       echo "请先解决冲突"
