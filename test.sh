@@ -8,12 +8,13 @@ if [ -n "$msg" ]; then
    git fetch origin "${branch}"
    git pull origin "${branch}"
    git push origin "${branch}"
-    if [ $? -eq "$num" ]; then
-      echo "输出的${$?}"
+   flag=  $?
+    if [ $flag -eq "$num" ]; then
+      echo "输出的$flag"
       npm run dev
       echo "项目已启动"
     else
-      echo "else中${$?}"
+      echo "else中$flag"
       echo "请先解决冲突"
     fi
 else

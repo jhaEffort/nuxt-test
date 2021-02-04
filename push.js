@@ -7,7 +7,7 @@
 *99999999999988888
 >>>>>>> 1b3256db78471cdfa3c1b274dedd9277a3dfa059
 *argv: ['node地址', '执行文件', '命令行参数']222
-*/
+*/aaa
 // console.log(process.argv.splice(2))
 const childProcess = require('child_process')
 const branch = childProcess.execSync('git rev-parse --abbrev-ref HEAD').toString().replace(/\s+/, '')
