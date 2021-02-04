@@ -1,8 +1,12 @@
 #!/bin/bash
-   git add .
-   git commit -m"alter"
-   git fetch origin master
-   git pull origin master
-   git push origin master
-   npm run dev
-   echo "项目已启动"
+msg=$1
+echo ${msg}
+if [ -n "$msg" ]; then
+   git add -A
+   git commit -m"${msg}"
+   git pull
+   git status
+   echo "完成add、commit、pull，别忘了push"
+else
+    echo "请添加注释再来一遍"
+fi
