@@ -17,8 +17,9 @@ error=$3
 
 
 if [-n "$error"]; then
-else
   echo "错误了"
+else
+  echo "成功了"
 fi
 aa = git pull origin master
 echo {$aa}
