@@ -1,7 +1,10 @@
 
 /*
+<<<<<<< HEAD
 *argv: ['node地址', '执行文件', '命令行参数']
 *argv: ['node地址', '执行文件', '命令行参数']111111111
+=======
+>>>>>>> 9396a90b3c71408959af018deda3ae80229de3d0
 */
 // console.log(process.argv.splice(2))
 const childProcess = require('child_process')

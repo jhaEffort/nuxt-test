@@ -2,7 +2,10 @@
 msg=$1
 branch=$2
 num=0
+arg= $(git ls-files -u | cut -f 2 | sort -u)
+echo ${arg}
 if [ -n "$msg" ]; then
+
    git add -A
    git commit -m"${msg}"
    git fetch origin "${branch}"
