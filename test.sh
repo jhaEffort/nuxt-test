@@ -13,12 +13,8 @@
 # else
 #     echo "请添加注释再来一遍"
 # fi
-try{
-  git pull origin master
-}catch(e) {
-  echo e
-}
-
+aa = git pull origin master 2>&1
+echo $aa
 # aa=$(git add -A 2>&1)
 # echo $aa
 # cat: /tmp/aa: No such file or directory
