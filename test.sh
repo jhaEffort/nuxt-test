@@ -15,8 +15,8 @@ error=$3
 #     echo "请添加注释再来一遍"
 # fi
 
-aa = git pull origin master
-echo {$aa}
+git pull origin master
+
 if [ -n "$error" ]; then
   echo $error
 else
