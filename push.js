@@ -1,7 +1,7 @@
 
 /*
 *argv: ['node地址', '执行文件', '命令行参数']
-*测试数据66666661111111
+*测试数据6688888888888888888888
 */
 // console.log(process.argv.splice(2))
 const childProcess = require('child_process')
