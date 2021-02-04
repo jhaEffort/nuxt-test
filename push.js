@@ -1,7 +1,7 @@
 
 /*
 *argv: ['node地址', '执行文件', '命令行参数']
-*测试数据6666666
+*测试数据66666661111111
 */
 // console.log(process.argv.splice(2))
 const childProcess = require('child_process')
@@ -14,7 +14,7 @@ syncFile.stdout.on('data', (data) => {
 });
 
 syncFile.on('close', (code) => {
-  console.log(`子进程退出码：${code}`)
+  spawn('sh', ['./test.sh', '', '', code])
 })
 syncFile.stderr.on('data', (data) => {
   console.log(`stderr:${data}`)
