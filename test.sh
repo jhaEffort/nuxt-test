@@ -12,7 +12,7 @@ if [ -n "$msg" ]; then
       npm run dev
       echo "项目已启动"
     else
-      echo ${$?}
+      echo "else中${$?}"
       echo "请先解决冲突"
     fi
 else
