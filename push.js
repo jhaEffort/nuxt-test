@@ -7,7 +7,7 @@ const childProcess = require('child_process')
 const branch = childProcess.execSync('git rev-parse --abbrev-ref HEAD').toString().replace(/\s+/, '')
 const { spawn, exec, execFile } = require('child_process');
 
-let syncFile = spawn('sh', ['./test.sh', '1']);
+let syncFile = spawn('sh', ['./test.sh', process.argv.splice(2), branch]);
 syncFile.stdout.on('data', (data) => {
   console.log(`stdout: ${data}`);
 });

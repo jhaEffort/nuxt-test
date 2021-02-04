@@ -1,10 +1,11 @@
 #!/bin/bash
 msg=$1
-echo ${msg}
+branch=$2
+echo ${msg} ${branch}
 if [ -n "$msg" ]; then
    git add -A
    git commit -m"${msg}"
-   git pull
+   git pull origin "${branch}"
    git status
    echo "完成add、commit、pull，别忘了push"
 else
