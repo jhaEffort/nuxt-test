@@ -5,7 +5,7 @@ echo ${msg} ${branch}
 if [ -n "$msg" ]; then
    git add -A
    git commit -m"${msg}"
-   git fetch origi "${branch}"
+   git fetch origin "${branch}"
    git pull origin "${branch}"
    git push origin "${branch}"
    npm run dev
