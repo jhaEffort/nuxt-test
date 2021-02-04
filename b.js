@@ -6,7 +6,8 @@ async function init() {
     await command('git add .');
     await command(`git commit -m ${process.argv.splice(2)}`);
     await command(`git fetch origin ${branch}`);
-    await command(`git pull origin ${branch}`);
+    const res =  await command(`git pull origin ${branch}`);
+    console.log('输出的res', res)
     await command(`git push origin ${branch}`);
   } catch (e) {
     console.log('输出的错误', e);
