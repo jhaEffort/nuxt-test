@@ -13,7 +13,7 @@
 # else
 #     echo "请添加注释再来一遍"
 # fi
-echo git pull origin "${branch}"
+echo git pull
 # aa=$(git add -A 2>&1)
 # echo $aa
 # cat: /tmp/aa: No such file or directory
