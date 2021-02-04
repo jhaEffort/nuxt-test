@@ -1,6 +1,11 @@
 
 /*
+<<<<<<< HEAD
 *argv: ['node地址', '执行文件', '命令行参数']erererererere
+=======
+*argv: ['node地址', '执行文件', '命令行参数']11fsdfsdfd43543fsdfdsfdsfdsfds5345431
+*99999999999988888
+>>>>>>> 1b3256db78471cdfa3c1b274dedd9277a3dfa059
 *argv: ['node地址', '执行文件', '命令行参数']222
 */
 // console.log(process.argv.splice(2))
