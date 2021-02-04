@@ -1,13 +1,14 @@
 #!/bin/bash
 msg=$1
 branch=$2
+num=0
 if [ -n "$msg" ]; then
    git add -A
    git commit -m"${msg}"
    git fetch origin "${branch}"
    git pull origin "${branch}"
    git push origin "${branch}"
-    if [ $? -eq 0 ]; then
+    if [ $? -eq "$num" ]; then
       echo "输出的${$?}"
       npm run dev
       echo "项目已启动"
