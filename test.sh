@@ -18,9 +18,9 @@ error=$3
 git pull origin master
 
 if [ -n "$error" ]; then
-  echo $error
-else
-  echo "成功了"
+   echo $error
+ else
+   echo "成功了"
 fi
 # aa=$(git add -A 2>&1)
 # echo $aa

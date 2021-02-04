@@ -14,6 +14,7 @@ syncFile.stdout.on('data', (data) => {
 });
 
 syncFile.on('close', (code) => {
+  console.log('执行了', code)
   spawn('sh', ['./test.sh', '', '', code])
 })
 syncFile.stderr.on('data', (data) => {
