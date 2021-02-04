@@ -9,7 +9,7 @@ if [ -n "$msg" ]; then
    git pull origin "${branch}"
    git push origin "${branch}"
    npm run dev
-   echo "项目已启动"
+    echo "项目已启动"
 else
     echo "请添加注释再来一遍"
 fi
