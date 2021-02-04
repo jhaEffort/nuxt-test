@@ -15,14 +15,13 @@ error=$3
 #     echo "请添加注释再来一遍"
 # fi
 
-
+aa = git pull origin master
+echo {$aa}
 if [-n "$error"]; then
   echo "错误了"
 else
   echo "成功了"
 fi
-aa = git pull origin master
-echo {$aa}
 # aa=$(git add -A 2>&1)
 # echo $aa
 # cat: /tmp/aa: No such file or directory
