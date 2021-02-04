@@ -3,7 +3,9 @@ msg=$1
 branch=$2
 num=0
 arg= $(git ls-files -u | cut -f 2 | sort -u)
+echo '000000000000000000000000000000'
 echo ${arg}
+echo '000000000000000000000000000000'
 if [ -n "$msg" ]; then
 
    git add -A
