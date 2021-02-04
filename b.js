@@ -1,13 +1,13 @@
-import command from './command';
+import command from './a.js';
+console.log(command)
+// async function init() {
+//   try {
+//     await command('git add .');
+//     await command('git commit -m "my commit" ');
+//     const result = await command('git push');
+//   } catch (e) {
+//     console.log(e);
+//   }
+// }
 
-async function init() {
-  try {
-    await command('git add .');
-    await command('git commit -m "my commit" ');
-    const result = await command('git push');
-  } catch (e) {
-    console.log(e);
-  }
-}
-
-init();
+// init();
