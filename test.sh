@@ -7,6 +7,7 @@ if [ -n "$msg" ]; then
    git fetch origin "${branch}"
    git pull origin "${branch}"
     if [ $? == 0 ]; then
+      echo "输出的${$?}"
       git push origin "${branch}"
       npm run dev
       echo "项目已启动"
