@@ -1,7 +1,7 @@
 #!/bin/bash
    git add .
    git commit -m"alter"
-   git fetch
-   git pull
-   git push
+   git fetch origin master
+   git pull origin master
+   git push origin master
    echo "完成add、commit、pull，别忘了push"
