@@ -6,7 +6,7 @@ if [ -n "$msg" ]; then
    git commit -m"${msg}"
    git fetch origin "${branch}"
    git pull origin "${branch}"
-    if [ $? === 0 ]; then
+    if [ $? == '0' ]; then
       echo "输出的${$?}"
       git push origin "${branch}"
       npm run dev
