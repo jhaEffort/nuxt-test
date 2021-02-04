@@ -1,8 +1,6 @@
 #!/bin/bash
 msg=$1
 branch=$2
-# error=$3
-# echo ${msg} ${branch}
 if [ -n "$msg" ]; then
    git add -A
    git commit -m"${msg}"
@@ -11,15 +9,16 @@ if [ -n "$msg" ]; then
     if [ $? == 0 ]; then
       git push origin "${branch}"
       npm run dev
+      echo $?
       echo "项目已启动"
     else
-      echo "请解决冲突"
+      echo "请先解决冲突"
     fi
 else
     echo "请添加注释再来一遍"
 fi
 
-# git pull origin master
+# $? 上次代码执行结果 0 是成功 1 是失败
 
 # if [ -n "$error" ]; then
 #    echo $error

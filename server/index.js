@@ -30,7 +30,6 @@ function useMiddleware() {
 
 function useRouter(path) {
   path = path || __dirname + '/routes'
-  console.log('输出的path', path)
   //注册路由
   let urls = fs.readdirSync(path)
   urls.forEach((element) => {
