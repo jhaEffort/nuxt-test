@@ -1,10 +1,10 @@
 
 /*
 *argv: ['node地址', '执行文件', '命令行参数']
-*测试数据111
+*测试数据666666666666666666666666666666666
 */
 // console.log(process.argv.splice(2))
-
+6
 const childProcess = require('child_process')
 const branch = childProcess.execSync('git rev-parse --abbrev-ref HEAD').toString().replace(/\s+/, '')
 const { spawn, exec, execFile } = require('child_process');
