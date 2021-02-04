@@ -6,14 +6,11 @@ if [ -n "$msg" ]; then
    git commit -m"${msg}"
    git fetch origin "${branch}"
    git pull origin "${branch}"
-   echo "判断外的${$?}"
     if [ $? == 0 ]; then
-      echo "正常${$?}"
       git push origin "${branch}"
       npm run dev
       echo "项目已启动"
     else
-      echo "有冲突的${$?}"
       echo "请先解决冲突"
     fi
 else
