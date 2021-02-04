@@ -3,6 +3,9 @@
 *argv: ['node地址', '执行文件', '命令行参数']
 */
 // console.log(process.argv.splice(2))
+const childProcess = require('child_process')
+const branch = childProcess.execSync('git rev-parse --abbrev-ref HEAD').toString().replace(/\s+/, '')
+console.log('去111111', branch)
 const { spawn, exec, execFile } = require('child_process');
 
 let syncFile = spawn('sh', ['./test.sh']);
