@@ -13,7 +13,7 @@
 # else
 #     echo "请添加注释再来一遍"
 # fi
-aa = git pull origin master 2>&1
+aa = git pull origin master
 echo $aa
 # aa=$(git add -A 2>&1)
 # echo $aa
