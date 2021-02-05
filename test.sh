@@ -4,8 +4,31 @@ branch=$2
 num=0
 arg=$(git ls-files -u | cut -f 2 | sort -u)
 echo $arg
+if [ ! -f "$arg" ]; then
+  echo '不存在'
+  else
+  echo '存在'
+fi
 # if [ -n "$msg" ]; then
+#    if [ -n "$arg"]; then
+#     git add -A
+#     git commit -m"${msg}"
+#     git fetch origin "${branch}"
+#     git pull origin "${branch}"
+#     git push origin "${branch}"
+#     npm run dev
+#    else
+#    fi
+# else
+#     echo "添加注释或者解决冲突"
+# fi
 
+
+
+
+
+
+# if [ -n "$msg" ]; then
 #    git add -A
 #    git commit -m"${msg}"
 #    git fetch origin "${branch}"
