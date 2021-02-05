@@ -4,10 +4,10 @@ branch=$2
 num=0
 arg=$(git ls-files -u | cut -f 2 | sort -u)
 echo $arg
-if [ ! -f "$arg" ]; then
-  echo '不存在'
-  else
+if [ -f "$arg" ]; then
   echo '存在'
+  else
+  echo '不存在'
 fi
 # if [ -n "$msg" ]; then
 #    if [ -n "$arg"]; then
