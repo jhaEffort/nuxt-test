@@ -4,20 +4,21 @@ branch=$2
 num=0
 arg=$(git ls-files -u | cut -f 2 | sort -u)
 echo $arg
-# if [ ! -f "$arg" ]; then
-#   echo '没有冲突'
-#   else
-#   echo "修改当前文件{$arg}"
-# fi
-# if [ ! -b "$arg"]; then
+
 if [ $arg == '']; then
   if [ -n "$msg" ]; then
     git add -A
     git commit -m"${msg}"
     git fetch origin "${branch}"
     git pull origin "${branch}"
-    git push origin "${branch}"
-    npm run dev
+    if [ $? -eq "$num" ]; then
+      git push origin "${branch}"
+      npm run dev
+      echo "项目已启动"
+    else
+      echo "else中$flag"
+      echo "请先解决冲突"
+    fi
   else
     echo "添加注释"
   fi
