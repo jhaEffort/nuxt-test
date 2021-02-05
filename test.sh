@@ -3,7 +3,7 @@ msg=$1
 branch=$2
 num=0
 arg=$(git ls-files -u | cut -f 2 | sort -u)
-echo $arg
+echo "--->$arg<----"
 
 if [ $arg == '']; then
   if [ -n "$msg" ]; then
