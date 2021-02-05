@@ -1,6 +1,7 @@
 
 /*
 *argv: ['node地址', '执行文件', '命令行参数']645654654654654
+*法第范德萨范德萨范德萨三方士大夫地方第三方的发生的发达省份的
 */
 // console.log(process.argv.splice(2))
 const childProcess = require('child_process')
