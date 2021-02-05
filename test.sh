@@ -9,7 +9,8 @@ echo $arg
 #   else
 #   echo "修改当前文件{$arg}"
 # fi
-if [ ! -f "$arg"]; then
+# if [ ! -b "$arg"]; then
+if [ $arg == '']; then
   if [ -n "$msg" ]; then
     git add -A
     git commit -m"${msg}"
@@ -18,10 +19,10 @@ if [ ! -f "$arg"]; then
     git push origin "${branch}"
     npm run dev
   else
-    echo "请先解决冲突文件{$arg}"
+    echo "添加注释"
   fi
  else
-   echo "添加注释"
+   echo "冲突"
   fi
 
 
