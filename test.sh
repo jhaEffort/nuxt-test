@@ -18,10 +18,10 @@ if [ ! -f "$arg"]; then
     git push origin "${branch}"
     npm run dev
   else
-    echo "添加注释或者解决冲突"
+    echo "请先解决冲突文件{$arg}"
   fi
  else
-   echo "请解决当前文件冲突：{$arg}"
+   echo "添加注释"
   fi
 
 
