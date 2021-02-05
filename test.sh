@@ -4,13 +4,13 @@ branch=$2
 num=0
 arg=$(git ls-files -u | cut -f 2 | sort -u)
 echo $arg
-if [ -f "$arg" ]; then
-  echo '存在'
-  else
+if [ ! -f "$arg" ]; then
   echo '不存在'
+  else
+  echo "修改当前文件{$arg}"
 fi
 # if [ -n "$msg" ]; then
-#    if [ -n "$arg"]; then
+#    if [ -f "$arg"]; then
 #     git add -A
 #     git commit -m"${msg}"
 #     git fetch origin "${branch}"
@@ -18,6 +18,7 @@ fi
 #     git push origin "${branch}"
 #     npm run dev
 #    else
+#      echo "修改当前文件{$arg}"
 #    fi
 # else
 #     echo "添加注释或者解决冲突"

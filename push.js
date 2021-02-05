@@ -1,6 +1,6 @@
 
 /*
-*argv: ['node地址', '执行文件', '命令行参数']489798798798798797
+*argv: ['node地址', '执行文件', '命令行参数']44333337944444
 */
 // console.log(process.argv.splice(2))
 const childProcess = require('child_process')
