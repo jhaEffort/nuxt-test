@@ -15,7 +15,7 @@
             :to="item.link"
             tag="li"
             class="nav-item"
-            >{{ $t("topbar." + item.name) }}</nuxt-link
+            >name</nuxt-link
           >
         </ul>
       </div>

@@ -1,17 +1,18 @@
 module.exports = {
   mode: 'universal',
+  telemetry: false,
   /*
   ** Server configuration
   */
   server: {
     port: 8001,
-    host: '192.168.0.125'
+    host: '192.168.0.103'
   },
   /*
   ** Environment variable configuration
   */
   env: {
-    baseUrl: 'http://192.168.0.125:8001'
+    baseUrl: 'http://192.168.0.103:8001'
   },
   /*
  ** Router configuration
