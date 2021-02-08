@@ -8,14 +8,14 @@
             alt="掘金"
           />
         </nuxt-link>
-        <ul>
+        <ul class="navs">
           <nuxt-link
             v-for="item in navs"
             :key="item.id"
             :to="item.link"
             tag="li"
             class="nav-item"
-            >name</nuxt-link
+            >{{ $t("topbar." + item.name) }}</nuxt-link
           >
         </ul>
       </div>
@@ -61,10 +61,36 @@ export default {
     background: #fff;
     box-shadow: 0 0 4px #eee;
     transition: all 0.2s;
-    .topbar__main {
-      height: 100%;
-      max-width: 960px;
-      margin: 0 auto;
+
+    &.topbar--show {
+      transform: translateY(0);
+    }
+    &.topbar--show {
+      transform: translateY(-100%);
+    }
+  }
+  .topbar__main {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    .logo {
+      margin-right: 20px;
+    }
+    .navs {
+      display: flex;
+      line-height: 60px;
+      font-size: 16px;
+      color: #71777c;
+      .nav-item {
+        padding: 0px 20px;
+        cursor: pointer;
+        &:hover,
+        &.nuxt-link-active {
+          color: $theme;
+        }
+      }
     }
   }
 }

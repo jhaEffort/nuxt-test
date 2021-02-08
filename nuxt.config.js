@@ -48,12 +48,22 @@ module.exports = {
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     '~/assets/css/reset.css',
-    'element-ui/lib/theme-chalk/index.css'
+    '~/assets/scss/global.scss',
+    '~/assets/scss/element-variable.scss',
+    '~/assets/scss/variable.scss',
   ],
 
+  /*
+   *  这个plugins可以理解为页面加载的时候，
+   *  可以把需要注入到页面之前的操作
+   *  plugins 属性配置的所有插件会在 Nuxt.js 应用初始化之前被加载导入。
+   *  每次你需要使用 Vue.use() 时，
+   *  你需要在 plugins/ 目录下创建相应的插件文件，并在 nuxt.config.js 中的 plugins 配置项中配置插件的路径。
+   **/
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    '@/plugins/element-ui'
+    '@/plugins/element-ui',
+    '~/plugins/i18n.js'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
